@@ -23,11 +23,13 @@ add-bom <file>
 ### Examples
 
 Add BOM to a UTF-8 CSV file:
+
 ```bash
 add-bom data.csv
 ```
 
 Force add BOM to a file (use with caution):
+
 ```bash
 add-bom data.csv --force
 ```
@@ -43,9 +45,10 @@ When opening CSV files in Excel on macOS, files without a BOM might be interpret
 ## Safety Features
 
 The tool includes several safety checks:
+
 - Verifies the file exists
 - Checks if the file already has a BOM
-- By default, only adds BOM to files that are already UTF-8 encoded
+- By default, only adds BOM to files that appear to be UTF-8 encoded
 - Requires `--force` flag to add BOM to files with other encodings
 
 ## License
